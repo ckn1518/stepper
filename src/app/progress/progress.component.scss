@@ -1,0 +1,139 @@
+main{
+  background: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#stepProgressBar  {
+display:  flex;
+justify-content:  space-between;
+align-items:  flex-end;
+width:  580px;
+margin:  0  auto;
+margin-bottom:  40px;
+}
+
+.step  {
+text-align:  center;
+}
+
+.step-text  {
+  margin-bottom:  10px;
+  color:  var(--prm-color);
+}
+
+
+.bullet {
+  border: 1px solid var(--prm-gray);
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  // color: var(--prm-gray);
+  display: inline-block;
+  position: relative;
+  transition: background-color 500ms;
+  line-height:20px;
+
+  
+}
+
+
+.bullet.completed  {
+color:  white;
+background-color:  var(--prm-color);
+}
+
+.bullet::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  height: 3px;
+  width: 68px;
+  background-color: var(--prm-gray);
+  margin-left: 6px;
+}
+
+.step:last-child>.bullet::after {
+  background: none;;
+}
+
+
+.bullet.completed::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  height: 3px;
+  width: 68px;
+  background-color: var(--prm-color);
+  margin-left: 4px;
+  transition: .5s ease;
+}
+
+.bullet:last-child::after {
+  border-bottom: none;
+}
+
+/* Base styles and helper stuff */
+.hidden  {
+display:  none;
+}
+
+.text-center  {
+text-align:  center;
+}
+
+.container  {
+  max-width:  600px;
+  margin:  0  auto;
+  margin-top:  20px;
+  padding:  40px;
+}
+
+i.fa {
+  font-size: 12px;
+}
+
+.step-title {
+  text-align: center;
+  // font: normal normal bold 14px/21px Open Sans;
+  letter-spacing: 0px;
+  color: #007A93;
+  font-size: 14px;
+  line-height: 21px;;
+  width: 80px;
+}
+
+.step-button {
+  width: 24px;
+  height: 24px;
+  background-color: var(--prm-gray);
+  color: #fff;
+  border: none;
+  
+}
+.step-button:active {
+  box-shadow: 0 0 0 1px #41c4d8;
+}
+
+.needAttention {
+  color: #fff;
+  background-color: #DF323D;
+}
+
+.step-title {
+  .needAttention {
+    background-color: #fff;
+    color: #DF323D;
+  }
+}
+
+
+.first {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+}
+.second {
+  height: 10px;
+  background-color: #009200;
+}

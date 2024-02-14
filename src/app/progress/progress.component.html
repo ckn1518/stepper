@@ -1,0 +1,70 @@
+<!-- <div class="timeline">
+    <div *ngFor="let item of value" class="timeline-event">
+        <div class="timeline-point-track-container">
+            <div class="timeline-point" [ngClass]="item.status === 'R' ? 'highlight': '' "></div>
+            <div class="timeline-track" [ngClass]="item.status === 'R' ? 'highlight': '' "></div>
+        </div>
+        <div class="timeline-content">
+            <span>{{item.content}}</span>
+            <span class="timeline-date">{{item.date}}</span>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div id="stepProgressBar">
+      <div class="step" *ngFor="let item of data">
+        <button class="step-button text-center bullet" [ngClass]="item.status" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <em *ngIf="item.icon"><i [ngClass]="item.icon" aria-hidden="true"></i></em>
+          </button>
+          <div class="step-title">
+            <p [ngClass]="item.status">{{item.text}}</p></div>
+      </div>
+      <!-- <div class="step">
+        <button class="step-button text-center bullet" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <div class="step-title">Complete <br> item</div>
+      </div>
+      <div class="step">
+        <button class="step-button text-center bullet" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <div class="step-title">Complete <br> item</div>
+      </div>
+      <div class="step">
+        <button class="step-button text-center bullet" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <div class="step-title">Complete <br> item</div>
+      </div>
+      <div class="step">
+        <button class="step-button text-center bullet" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <div class="step-title">Complete <br> item</div>
+      </div>
+      <div class="step">
+        <button class="step-button text-center bullet" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          <div class="step-title">Complete <br> item</div>
+      </div> -->
+    </div>
+    <div id="main">
+      <p id="content"  class="text-center">Step Number 1</p>
+      <button id="previousBtn" >Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="finishBtn" >Finish</button>
+    </div>
+
+    <div class="first" style="margin-top: 40px">
+      <div [ngStyle]="{'width' : width + '%' }" class="second"></div>
+    </div>
+  </div>
